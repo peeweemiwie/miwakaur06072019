@@ -1,0 +1,60 @@
+@import '../style-variables';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 10rem;
+}
+.elm-wrapper {
+  &.col-2 {
+    @supports (display: grid) {
+      display: grid;
+      grid-auto-rows: 1fr;
+      grid-column-gap: 3rem;
+      grid-template-columns: repeat(2, minmax(3rem, 1fr));
+    }
+  }
+}
+.mat-toolbar {
+  border-bottom: 1px solid $mk-red;
+  position: relative;
+  &:after {
+    background: linear-gradient(to bottom, rgba($dark-gray, .5) 0%,rgba($dark-gray,0) 100%);
+    bottom: -1.1rem;
+    content: "";
+    display: block;
+    height: 1rem;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    z-index: 1;
+  }
+  .mat-toolbar-row {
+    height: 10rem;
+    &:focus,
+    &:hover {
+      .logo {
+        transform: rotateY(360deg);
+      }
+    }
+    .title {
+      // font-family: $font-family-assistant;
+      font-weight: lighter;
+      line-height: normal;
+      &.major {
+        font-size: 5rem;
+        margin: 0 2rem;
+      }
+      &.minor {
+        font-size: $font-x-large;
+        margin-top: 2rem;
+      }
+    }
+    .logo {
+      display: inline-block;
+      transition: transform .5s ease;
+      width: 5rem;
+    }
+  }
+}

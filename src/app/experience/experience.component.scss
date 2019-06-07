@@ -1,0 +1,21 @@
+@import '../../style-variables';
+
+.date {
+  font-size: $font-medium;
+  width: 20rem;
+}
+
+.list {
+  list-style: none;
+  padding-left: 2rem;
+  .list-item {
+    align-items: center;
+    display: flex;
+    &::before {
+      content: "• ";
+      color: $mk-cyan;
+      font-size: 2rem;
+      width: 1.5rem;
+    }
+  }
+}

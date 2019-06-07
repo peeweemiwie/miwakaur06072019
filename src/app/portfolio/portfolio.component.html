@@ -1,0 +1,21 @@
+<mat-card class="outer-card">
+  <h2 class="section-header"><i class="material-icons">code</i> Portfolio</h2>
+  <mat-card-header>
+    <mat-card-title>Creative Coding</mat-card-title>
+    <mat-card-subtitle>One of my favorite things is to code creatively. Here are some example of CSS and JS drawing and animation.</mat-card-subtitle>
+  </mat-card-header>
+  <a mat-button href="https://codepen.io/peeweemiwie/">View more on Codepen</a>
+
+  <div class="elm-wrapper col-3">
+    <mat-card *ngFor="let item of items">
+        <p
+          [attr.data-height]="item.height"
+          data-theme-id="19622"
+          [attr.data-slug-hash]="item.slugHash"
+          data-default-tab="result"
+          data-user="peeweemiwie"
+          [attr.data-preview]="item.preview"
+          class='codepen'>See the Pen</p>
+      </mat-card>
+  </div>
+</mat-card>

@@ -1,0 +1,97 @@
+@import 'style-variables';
+
+.bubble-wrapper {
+  background-color: rgba($dark-gray, .95);
+  height: 100vh;
+  overflow: hidden;
+  perspective: 800px;
+  position: fixed;
+  top: 10rem;
+  transform-style: preserve-3d;
+  width: 100vw;
+  z-index: -1;
+
+  span {
+    background-color: rgba(230, 230, 230, .5);
+    border-radius: 100%;
+    display: inline-block;
+    margin: 2rem;
+  }
+
+  $duration: 20s;
+  span:nth-of-type(4n+1) {
+    animation: bubblesUp $duration infinite;
+  }
+
+  span:nth-of-type(4n+2) {
+    animation: bubblesDown $duration infinite 2s;
+  }
+
+  span:nth-of-type(4n+3) {
+    animation: bubblesRight $duration infinite 4s;
+  }
+
+  span:nth-of-type(4n+4) {
+    animation: bubblesLeft $duration infinite 6s;
+  }
+}
+
+@keyframes bubblesUp {
+  0% {
+    opacity: 1;
+    transform: scale3D(1, 1, 1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale3D(3, 3, 3) translateY(-20rem);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3D(1, 1, 1);
+  }
+}
+
+@keyframes bubblesDown {
+  0% {
+    opacity: 1;
+    transform: scale3D(1, 1, 1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale3D(3, 3, 3) translateY(20rem);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3D(1, 1, 1);
+  }
+}
+
+@keyframes bubblesRight {
+  0% {
+    opacity: 1;
+    transform: scale3D(1, 1, 1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale3D(5, 5, 5) translateX(20rem);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3D(1, 1, 1);
+  }
+}
+
+@keyframes bubblesLeft {
+  0% {
+    opacity: 1;
+    transform: scale3D(1, 1, 1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale3D(5, 5, 5) translateX(-20rem);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3D(1, 1, 1);
+  }
+}
