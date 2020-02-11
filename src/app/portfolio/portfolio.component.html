@@ -1,11 +1,20 @@
 <mat-card class="outer-card">
   <h2 class="section-header"><i class="material-icons">code</i> Portfolio</h2>
-  <mat-card-header>
-    <mat-card-title>Creative Coding</mat-card-title>
-    <mat-card-subtitle>One of my favorite things is to code creatively. Here are some example of CSS and JS drawing and animation.</mat-card-subtitle>
-  </mat-card-header>
-  <a mat-button href="https://codepen.io/peeweemiwie/">View more on Codepen</a>
 
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>UI/UX Design</mat-card-title>
+      <mat-card-subtitle>Here are some of my work using Sketch, Adove CS, HTML5, CSS3 and JS.</mat-card-subtitle>
+    </mat-card-header>
+    <a mat-button href="./assets/design.pdf" target="_blank">View Design Portfolio</a>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Creative Coding</mat-card-title>
+      <mat-card-subtitle>One of my favorite things is to code creatively. Here are some example of CSS and JS drawing and animation.</mat-card-subtitle>
+    </mat-card-header>
+    <a mat-button href="https://codepen.io/peeweemiwie/">View more on Codepen</a>
+  </mat-card>
   <div class="elm-wrapper col-3">
     <mat-card *ngFor="let item of items">
         <p

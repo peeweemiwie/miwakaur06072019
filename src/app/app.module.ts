@@ -13,6 +13,8 @@ import { ExperienceComponent } from './experience/experience.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { BioComponent } from './bio/bio.component';
 import { ContactComponent } from './contact/contact.component';
+import { DesignComponent } from './design/design.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ContactComponent } from './contact/contact.component';
     ExperienceComponent,
     PortfolioComponent,
     BioComponent,
-    ContactComponent
+    ContactComponent,
+    DesignComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
